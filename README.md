@@ -1,91 +1,176 @@
-📄 Python PDF Master Tool
+# 📄 **Python PDF Tool -- Smiling 😺**
 
-Python PDF Master Tool là một ứng dụng giao diện đồ họa (GUI) mạnh mẽ và dễ sử dụng, được viết bằng Python. Công cụ này giúp bạn xử lý các tệp PDF nhanh chóng: ghép file, tách trang, xoay chiều và đặt mật khẩu bảo vệ chỉ với vài cú click chuột.
+## 🔧 Ứng dụng gộp & xử lý PDF đơn giản -- mạnh mẽ -- trực quan
 
-Điểm nổi bật: Không cần upload file lên các trang web lạ, đảm bảo an toàn dữ liệu 100% vì mọi thứ chạy offline trên máy tính của bạn.
+**Python PDF Tool** là ứng dụng desktop được xây dựng bằng **Tkinter**
+và **pypdf**, cho phép bạn thao tác với PDF một cách nhanh chóng và trực
+quan:
 
-✨ Tính Năng Chính
+-   Gộp nhiều file PDF thành một file duy nhất\
+-   Chọn trang tùy ý từ từng file\
+-   Xoay trang PDF theo ý muốn\
+-   Thay đổi thứ tự sắp xếp file\
+-   Tự động tạo Bookmark theo tên file\
+-   Đặt mật khẩu bảo vệ PDF đầu ra
 
-📂 Ghép File (Merge): Gộp không giới hạn số lượng file PDF thành một file duy nhất.
+------------------------------------------------------------------------
 
-✂️ Tách & Chọn Trang Thông Minh: Hỗ trợ cú pháp linh hoạt (ví dụ: 1-5, 8, 10-12) để lấy chính xác những trang bạn cần.
+# 📸 Giao diện
 
-🔄 Xoay Trang (Rotate): Xoay file PDF theo các góc 90°, 180°, 270° trước khi ghép (Rất hữu ích cho các file scan bị ngược).
+Ứng dụng gồm 3 phần chính:
 
-📑 Tự Động Tạo Mục Lục (Auto Bookmarks): File kết quả sẽ tự động có Mục lục (Outline) tương ứng với tên các file thành phần, giúp tra cứu dễ dàng.
+### **1️⃣ Header**
 
-🔒 Bảo Mật (Encryption): Đặt mật khẩu mã hóa cho file PDF đầu ra chuẩn AES.
+-   Nút **+ Thêm File**\
+-   Nút **🗑 Xóa Hết**
 
-⬆️ Sắp Xếp Linh Hoạt: Dễ dàng thay đổi thứ tự ghép file bằng các nút điều hướng Lên/Xuống.
+### **2️⃣ Danh sách PDF**
 
-🎨 Giao Diện Hiện Đại: Sử dụng thư viện tkinter với phong cách thiết kế phẳng, sạch sẽ và thân thiện.
+Hiển thị: - Tên file + số trang\
+- Nút xoay trang\
+- Ô nhập phạm vi trang\
+- Nút tăng/giảm thứ tự\
+- Nút xoá file
 
-📸 Giao Diện
+### **3️⃣ Footer**
 
-(Bạn hãy chụp ảnh màn hình tool khi chạy và thay thế vào link bên dưới)
+-   Tuỳ chọn **Đặt mật khẩu**\
+-   Nút **🚀 GHÉP FILE NGAY**
 
-🛠️ Cài Đặt
+------------------------------------------------------------------------
 
-Trước khi chạy, hãy đảm bảo máy tính của bạn đã cài đặt Python (phiên bản 3.6 trở lên).
+# 🚀 Tính năng chi tiết
 
-Bước 1: Clone dự án về máy
+## ✔ 1. Thêm và kiểm tra file PDF
 
-git clone [https://github.com/username-cua-ban/python-pdf-master-tool.git](https://github.com/username-cua-ban/python-pdf-master-tool.git)
-cd python-pdf-master-tool
+Ứng dụng: - Cho phép chọn nhiều file cùng lúc\
+- Kiểm tra tính hợp lệ\
+- Lấy số trang bằng `PdfReader`
 
+------------------------------------------------------------------------
 
-Bước 2: Cài đặt thư viện
+## ✔ 2. Chọn trang cần dùng
 
-Dự án sử dụng thư viện pypdf để xử lý lõi.
+Bạn có thể nhập theo các cú pháp: - `1-5`\
+- `1, 3, 7`\
+- `1-4, 6, 8-10`
 
-pip install -r requirements.txt
+Ứng dụng tự động phân tích & chuẩn hóa.
 
+------------------------------------------------------------------------
 
-🚀 Hướng Dẫn Sử Dụng
+## ✔ 3. Xoay trang PDF
 
-Chạy ứng dụng:
+-   Mỗi lần click xoay **90°**
+-   Hỗ trợ xoay từng file độc lập
 
-python PDF_Merger_Tool_Final.py
+------------------------------------------------------------------------
 
+## ✔ 4. Sắp xếp thứ tự file
 
-Thêm file: Nhấn nút + Thêm File và chọn các file PDF cần xử lý.
+-   Nút **⬆** và **⬇** giúp thay đổi thứ tự file được merge
+-   Ảnh hưởng trực tiếp đến thứ tự trang trong file PDF cuối
 
-Cấu hình:
+------------------------------------------------------------------------
 
-Chọn trang: Nhập số trang vào ô bên cạnh tên file (VD: 1-3 để lấy 3 trang đầu). Để trống nếu muốn lấy hết.
+## ✔ 5. Tự động tạo Bookmark
 
-Xoay: Nhấn nút ⟳ 0° để xoay trang nếu cần.
+Khi gộp file: - Tên từng file PDF được thêm thành một **Bookmark** -
+Giúp nhảy nhanh tới từng phần trong PDF gộp
 
-Sắp xếp: Dùng nút ⬆ hoặc ⬇ để đổi thứ tự.
+------------------------------------------------------------------------
 
-Tùy chọn: Tick vào ô Đặt mật khẩu nếu muốn bảo vệ file.
+## ✔ 6. Đặt mật khẩu PDF
 
-Xuất file: Nhấn nút 🚀 GHÉP FILE NGAY và chọn nơi lưu.
+-   Hỗ trợ mã hóa bằng `writer.encrypt()`
+-   Chỉ cần nhập password rồi xuất file
 
-📦 Cấu Trúc Dự Án
+------------------------------------------------------------------------
 
-python-pdf-master-tool/
-├── PDF_Merger_Tool_Final.py   # Source code chính của chương trình
-├── requirements.txt           # Danh sách các thư viện cần thiết
-└── README.md                  # Tài liệu hướng dẫn sử dụng
+## ✔ 7. Xuất file PDF gộp
 
+-   Tự chọn đường dẫn lưu\
+-   Mặc định: **merged_document.pdf**\
+-   Hiện thông báo thành công + tổng số trang đã gộp
 
-🤝 Đóng Góp (Contributing)
+------------------------------------------------------------------------
 
-Mọi đóng góp đều được hoan nghênh! Nếu bạn tìm thấy lỗi hoặc muốn thêm tính năng mới (ví dụ: chế độ Dark Mode, nén file...), hãy tạo một Pull Request.
+# 🛠 Cài đặt
 
-Fork dự án.
+## Yêu cầu
 
-Tạo branch mới (git checkout -b feature/TinhNangMoi).
+-   Python ≥ **3.8**
+-   Cài thư viện:
 
-Commit thay đổi (git commit -m 'Thêm tính năng X').
+``` bash
+pip install pypdf
+```
 
-Push lên branch (git push origin feature/TinhNangMoi).
+Nếu dùng Linux:
 
-Mở Pull Request.
+``` bash
+sudo apt install python3-tk
+```
 
-📝 Giấy Phép (License)
+------------------------------------------------------------------------
 
-Dự án này được phát hành dưới giấy phép MIT License. Bạn hoàn toàn miễn phí sử dụng, sửa đổi và phân phối.
+# ▶️ Chạy ứng dụng
 
-Được phát triển với ❤️ bằng Python.
+``` bash
+python main.py
+```
+
+------------------------------------------------------------------------
+
+# 📂 Cấu trúc
+
+    main.py        # Source code chính
+    README.md          # File mô tả dự án
+    requirements.txt    # Thư viện cần thiết
+
+------------------------------------------------------------------------
+
+# 🧠 Kiến trúc code
+
+## **🔹 Lớp chính: `PDFMergerApp`**
+
+### **Các phương thức quan trọng:**
+
+#### `add_files()`
+
+-   Chọn file
+-   Đọc số trang
+-   Kiểm tra hợp lệ
+
+#### `parse_page_selection()`
+
+-   Phân tích chuỗi trang
+-   Hỗ trợ dạng range & danh sách
+
+#### `draw_row()`
+
+-   Vẽ từng dòng PDF lên UI
+-   Render đầy đủ nút xoay, xoá, thứ tự
+
+#### `move_item()`, `delete_item()`
+
+-   Quản lý danh sách PDF
+
+#### `process_pdf()`
+
+-   Merge PDF theo thứ tự\
+-   Lọc trang theo lựa chọn\
+-   Xoay theo góc đã đặt\
+-   Tạo Bookmark tự động\
+-   Đặt mật khẩu nếu bật\
+-   Ghi file xuất ra
+
+------------------------------------------------------------------------
+
+# ❤️ Tác giả
+
+Made with love by **Smiling 😺**\
+Ứng dụng miễn phí -- đơn giản -- mạnh mẽ -- dễ sử dụng.
+
+- Dark/Light mode mới\
+- Refactor code
