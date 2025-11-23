@@ -6,11 +6,11 @@
 và **pypdf**, cho phép bạn thao tác với PDF một cách nhanh chóng và trực
 quan:
 
--   Gộp nhiều file PDF thành một file duy nhất\
--   Chọn trang tùy ý từ từng file\
--   Xoay trang PDF theo ý muốn\
--   Thay đổi thứ tự sắp xếp file\
--   Tự động tạo Bookmark theo tên file\
+-   Gộp nhiều file PDF thành một file duy nhất
+-   Chọn trang tùy ý từ từng file
+-   Xoay trang PDF theo ý muốn
+-   Thay đổi thứ tự sắp xếp file
+-   Tự động tạo Bookmark theo tên file
 -   Đặt mật khẩu bảo vệ PDF đầu ra
 
 ------------------------------------------------------------------------
@@ -21,20 +21,20 @@ quan:
 
 ### **1️⃣ Header**
 
--   Nút **+ Thêm File**\
+-   Nút **+ Thêm File**
 -   Nút **🗑 Xóa Hết**
 
 ### **2️⃣ Danh sách PDF**
 
-Hiển thị: - Tên file + số trang\
-- Nút xoay trang\
-- Ô nhập phạm vi trang\
-- Nút tăng/giảm thứ tự\
+Hiển thị: - Tên file + số trang
+- Nút xoay trang
+- Ô nhập phạm vi trang
+- Nút tăng/giảm thứ tự
 - Nút xoá file
 
 ### **3️⃣ Footer**
 
--   Tuỳ chọn **Đặt mật khẩu**\
+-   Tuỳ chọn **Đặt mật khẩu**
 -   Nút **🚀 GHÉP FILE NGAY**
 
 ------------------------------------------------------------------------
@@ -43,16 +43,16 @@ Hiển thị: - Tên file + số trang\
 
 ## ✔ 1. Thêm và kiểm tra file PDF
 
-Ứng dụng: - Cho phép chọn nhiều file cùng lúc\
-- Kiểm tra tính hợp lệ\
+Ứng dụng: - Cho phép chọn nhiều file cùng lúc
+- Kiểm tra tính hợp lệ
 - Lấy số trang bằng `PdfReader`
 
 ------------------------------------------------------------------------
 
 ## ✔ 2. Chọn trang cần dùng
 
-Bạn có thể nhập theo các cú pháp: - `1-5`\
-- `1, 3, 7`\
+Bạn có thể nhập theo các cú pháp: - `1-5`
+- `1, 3, 7`
 - `1-4, 6, 8-10`
 
 Ứng dụng tự động phân tích & chuẩn hóa.
@@ -89,8 +89,8 @@ Giúp nhảy nhanh tới từng phần trong PDF gộp
 
 ## ✔ 7. Xuất file PDF gộp
 
--   Tự chọn đường dẫn lưu\
--   Mặc định: **merged_document.pdf**\
+-   Tự chọn đường dẫn lưu
+-   Mặc định: **merged_document.pdf**
 -   Hiện thông báo thành công + tổng số trang đã gộp
 
 ------------------------------------------------------------------------
@@ -158,19 +158,19 @@ python main.py
 
 #### `process_pdf()`
 
--   Merge PDF theo thứ tự\
--   Lọc trang theo lựa chọn\
--   Xoay theo góc đã đặt\
--   Tạo Bookmark tự động\
--   Đặt mật khẩu nếu bật\
+-   Merge PDF theo thứ tự
+-   Lọc trang theo lựa chọn
+-   Xoay theo góc đã đặt
+-   Tạo Bookmark tự động
+-   Đặt mật khẩu nếu bật
 -   Ghi file xuất ra
 
 ------------------------------------------------------------------------
 
 # ❤️ Tác giả
 
-Made with love by **Smiling 😺**\
+Made with love by **Smiling 😺**
 Ứng dụng miễn phí -- đơn giản -- mạnh mẽ -- dễ sử dụng.
 
-- Dark/Light mode mới\
+- Dark/Light mode mới
 - Refactor code
